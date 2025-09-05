@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sachin Kumar | coderz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1a1a2e);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 100px 20px 40px;
+    }
+
+    .full-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 4em;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      background: linear-gradient(to right, #ff007f, #ff9900, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeSlide 2s ease-out forwards, glowText 3s ease-in-out infinite alternate;
+      opacity: 0;
+      position: relative;
+    }
+
+    @keyframes fadeSlide {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes glowText {
+      from { text-shadow: 0 0 10px #ff007f; }
+      to { text-shadow: 0 0 20px #00ffff; }
+    }
+
+    .underline {
+      width: 220px;
+      height: 5px;
+      margin: 10px auto 0;
+      background: linear-gradient(90deg, #ff007f, #ff9900, #00ffff);
+      background-size: 300% 300%;
+      animation: moveLine 4s linear infinite;
+      border-radius: 5px;
+    }
+
+    @keyframes moveLine {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header p {
+      font-size: 1.2em;
+      font-style: italic;
+      color: #ccc;
+      animation: fadeInUp 2s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2em;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, #ff007f, #ff9900, #00ffff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    p, ul li {
+      color: #e0f7fa;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 12px 18px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      transition: 0.3s;
+      box-shadow: 0 0 5px rgba(0,255,255,0.2);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li:hover {
+      background: rgba(0, 255, 255, 0.2);
+      transform: scale(1.02);
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    .quote {
+      font-size: 1.5em;
+      text-align: center;
+      margin-top: 60px;
+      font-style: italic;
+      background: linear-gradient(to right, #00ffff, #ff00ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulseQuote 3s infinite;
+    }
+
+    @keyframes pulseQuote {
+      0% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+      100% { opacity: 0.6; transform: scale(1); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9em;
+      color: #aaa;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="full-name">Sachin Kumar</h1>
+    <div class="underline"></div>
+    <p>SSDIAN | Solo Grind | Emotional Independence | Future Coder</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>About Me</h2>
+      <p>"Main U.P main Mainpuri ke ek chhote se Gaao se hoon, lekin meri soch kisi boundary mein nahi aati. Emotional setbacks ko main system bana ke handle karta hoon, aur har din apne aap ko upgrade karta hoon—mindset, skills aur vision ke level pe. Main duniya ke rules follow nahi karta… main apne khud ke rules likhta hoon."<br><br>
+      "Class 11th Commerce meri journey ka ek chapter hai, coding meri kahaani ka soul. Main grades ke liye nahi, growth ke liye grind karta hoon—kyunki asli value marks mein nahi, mindset mein hoti hai."</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>System Optimizer Mindset</li>
+        <li>Tech Troubleshooting Expert</li>
+        <li>Respectful & Effective Talk</li>
+        <li>Ethical Hacking Learner</li>
+        <li>Personal Branding Architect</li>
+        <li>Emotional Independence</li>
+        <li>Web Development</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Goals</h2>
+      <ul>
+        <li>JEECUP 2026 → Diploma in CS → B.Tech in Cyber Security</li>
+        <li>Build a career in tech with high-growth roles</li>
+        <li>I’m on the path to becoming an ethical hacking expert—learning step by step, the right way</li>
+        <li>I love to travel—exploring new places keeps my mind fresh and my vision wide</li>
+      </ul>
+    </section>
+
+    <div class="quote">"I’m not chasing shortcuts—I’m building strength, skill, and silence into my system."</div>
+  </div>
+
+  <footer>
+    Made with grind & vision by Sachin Kumar © 2025
+  </footer>
+
+  <script>
+    // Scroll reveal animation
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+</html>
