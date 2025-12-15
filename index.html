@@ -3,354 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎉 Happy Birthday, Mohit! - A Special Wish 🎉</title>
+    <title>Ultimate Business Studies Key Concepts</title>
     
-    <style>
-        /* Import a clean, modern font */
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Oswald:wght@700&display=swap" rel="stylesheet">
 
-        :root {
-            --primary-color: #f39c12; /* Bright Gold/Orange */
-            --secondary-color: #c0392b; /* Deep Red/Maroon */
-            --background-dark: #2c3e50; /* Dark Blue/Charcoal */
-            --card-background: rgba(255, 255, 255, 0.98); /* Slightly transparent white, less transparent */
-            --text-color-dark: #333333;
-            --text-color-light: #555555;
+    <style>
+        /* Global Reset and Typography */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
         }
 
         body {
-            background-color: var(--background-dark);
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Align to top for scrolling */
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px; /* Padding for mobile view */
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-color-dark);
-            overflow-x: hidden; /* Prevent horizontal scroll */
-            overflow-y: auto; /* Enable vertical scroll */
+            background-color: #121212; /* Dark Background */
+            color: #e0e0e0; /* Light Text */
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Main Title Area (Replaced Fixed Header) --- */
+        .page-title-strip {
+            background-color: #ff5722; /* Vibrant Orange */
+            padding: 25px 20px;
             text-align: center;
-            perspective: 1000px; /* For 3D transforms */
-            box-sizing: border-box; /* Include padding in element's total width and height */
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
-
-        /* --- Particle/Star Background Effect (Pure CSS) --- */
-        #particle-bg {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            pointer-events: none; /* Allow interaction with elements behind it */
-        }
-
-        .star {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            box-shadow: 0 0 5px var(--primary-color);
-            animation: twinkle 5s infinite ease-in-out alternate;
-        }
-
-        @keyframes twinkle {
-            0% { opacity: 0.5; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.5); }
-        }
-        /* JavaScript will place these stars */
-
-        /* --- Birthday Card Styling --- */
-        .birthday-card {
-            background-color: var(--card-background);
-            padding: 40px 30px; /* Adjusted padding for mobile */
-            border-radius: 10px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-            max-width: 650px;
-            width: 100%; /* Full width on mobile, with padding */
-            position: relative;
-            z-index: 10;
-            transform: rotateY(90deg);
-            animation: flipIn 1.5s forwards ease-out;
-            margin-top: 50px; /* Spacing from top for scrollability */
-            margin-bottom: 50px; /* Spacing from bottom for scrollability */
-        }
-
-        @keyframes flipIn {
-            0% { transform: rotateY(90deg); opacity: 0; }
-            100% { transform: rotateY(0deg); opacity: 1; }
-        }
-
-        /* --- Text and Element Styling --- */
-        .main-heading {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary-color);
-            font-size: 3.5em; /* Adjusted for mobile */
-            margin: 0 0 10px 0;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 3px; /* Adjusted for mobile */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .recipient-name {
-            font-size: 2.2em; /* Adjusted for mobile */
-            color: var(--secondary-color);
-            margin: 0;
-            padding-bottom: 15px;
-            border-bottom: 4px solid var(--primary-color);
-            display: inline-block;
-            font-weight: 700;
-            background-image: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .message {
-            font-size: 1.1em; /* Adjusted for mobile */
-            line-height: 1.7;
-            margin: 35px 0;
-            font-weight: 400;
-            color: var(--text-color-light);
-            padding: 10px;
-            border-left: 5px solid var(--secondary-color);
-        }
-
-        .wish-sender p {
-            margin: 5px 0;
-            font-size: 1.1em; /* Adjusted for mobile */
-            font-weight: 700;
-            color: var(--secondary-color);
-        }
-
-        /* --- The Power Button --- */
-        .surprise-button {
-            background-color: var(--secondary-color);
+        .page-title-strip h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.2em;
             color: white;
-            border: none;
-            padding: 12px 30px; /* Adjusted for mobile */
-            border-radius: 50px;
-            font-size: 1.2em; /* Adjusted for mobile */
-            font-weight: 700;
-            cursor: pointer;
-            margin-top: 30px;
-            box-shadow: 0 8px 20px rgba(192, 57, 43, 0.5);
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            letter-spacing: 2px;
             text-transform: uppercase;
-            animation: pulse 2s infinite;
+            margin-bottom: 5px;
+        }
+        .page-title-strip p {
+            font-size: 1em;
+            color: #f7f7f7;
+            font-weight: 400;
         }
 
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0px rgba(192, 57, 43, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(192, 57, 43, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0); }
+        /* --- Main Content and Sections --- */
+        main {
+            max-width: 95%;
+            margin: 0px auto 40px auto;
+            padding: 10px;
         }
 
-        .surprise-button:hover {
-            background-color: #e74c3c;
-            transform: scale(1.05) translateY(-2px);
-            box-shadow: 0 12px 30px rgba(192, 57, 43, 0.7);
-            animation: none; /* Stop pulse on hover */
+        .topic-section {
+            padding: 30px 15px;
+            margin-bottom: 35px;
+            background-color: #1f1f1f; /* Slightly lighter dark background for contrast */
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7); /* Deep Shadow */
+            border: 1px solid #333;
+        }
+
+        h2 {
+            color: #ff9800; /* Amber/Gold Accent */
+            font-size: 1.8em;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ff5722; /* Orange separator */
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            color: #4CAF50; /* Success Green */
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            border-left: 5px solid #ff9800;
+            padding-left: 10px;
+            font-weight: 700;
         }
         
-        /* --- Confetti Effect --- */
-        .confetti-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 20; 
-        }
-
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
+        /* --- Content Card Styling and Animation --- */
+        .content-box {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #2c3e50; /* Navy Blue Card */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 152, 0, 0.3); /* Soft Gold Glow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+            /* Initial state for JavaScript animation */
             opacity: 0;
-            animation: fall 8s linear infinite; 
-            transform-style: preserve-3d; 
+            transform: scale(0.95) rotateX(10deg);
+            transition: opacity 0.8s cubic-bezier(0.17, 0.84, 0.44, 1), 
+                        transform 0.8s cubic-bezier(0.17, 0.84, 0.44, 1);
         }
 
-        @keyframes fall {
-            0% { transform: translate3d(0, -100px, 0) rotateX(0deg); opacity: 1; }
-            100% { transform: translate3d(0, 100vh, 100px) rotateX(1800deg); opacity: 0.1; }
+        .content-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(255, 87, 34, 0.7); /* Stronger Orange Glow on Hover */
         }
 
-        /* --- Responsive Adjustments for Smaller Screens --- */
-        @media (max-width: 768px) {
-            .birthday-card {
-                padding: 30px 20px; /* Smaller padding on smaller screens */
-                margin-top: 30px;
-                margin-bottom: 30px;
-            }
-
-            .main-heading {
-                font-size: 2.8em; /* Smaller font size for mobile */
-                letter-spacing: 2px;
-            }
-
-            .recipient-name {
-                font-size: 1.8em; /* Smaller font size for mobile */
-            }
-
-            .message {
-                font-size: 1em; /* Smaller font size for mobile */
-            }
-
-            .surprise-button {
-                font-size: 1.1em; /* Smaller button font size */
-                padding: 10px 25px;
-            }
+        .content-box.is-visible {
+            opacity: 1;
+            transform: scale(1) rotateX(0deg);
         }
 
-        @media (max-width: 480px) {
-            .main-heading {
-                font-size: 2.2em;
+        /* List Styling */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 0.95em;
+            color: #f7f7f7;
+        }
+        
+        ul li::before {
+            content: '🔥'; /* Fire Bullet for impact */
+            position: absolute;
+            left: 0;
+            font-size: 1em;
+        }
+
+        ul li strong {
+            color: #ff9800; /* Gold/Amber for Key Terms */
+            font-weight: 700;
+        }
+        
+        .definition-highlight {
+            display: inline-block;
+            background-color: #ff5722;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        .simple-text {
+            font-style: italic;
+            color: #aaa;
+            display: block;
+            margin-top: 8px;
+            margin-bottom: 10px;
+            font-size: 0.85em;
+        }
+        
+        /* --- Footer and Signature --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #000;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 5px solid #ff9800;
+        }
+
+        .signature {
+            margin-top: 15px;
+            font-size: 1.3em;
+            font-weight: 900;
+            color: #ff5722; 
+            text-shadow: 0 0 5px rgba(255, 87, 34, 0.9);
+        }
+
+        /* --- Media Queries for Desktop --- */
+        @media (min-width: 768px) {
+            .page-title-strip h1 {
+                font-size: 3em; 
             }
-            .recipient-name {
-                font-size: 1.5em;
+            .page-title-strip p {
+                font-size: 1.2em; 
             }
-            .message {
-                font-size: 0.95em;
+            main {
+                max-width: 900px;
             }
-            .surprise-button {
-                font-size: 1em;
-                padding: 8px 20px;
+            h2 {
+                font-size: 2.5em;
             }
         }
     </style>
+
     </head>
 <body>
 
-    <div id="particle-bg"></div>
-
-    <div class="birthday-card">
-        <h1 class="main-heading">Happy Birthday!</h1>
-        <h2 class="recipient-name">Dearest Mohit</h2>
-
-        <p class="message">
-            Wishing you a day as brilliant as your smile and a year as wonderful as you are! May your special day be filled with immense joy, unforgettable moments, and the realization of all your dreams. Here's to another fantastic year of growth, happiness, and success!
-        </p>
-
-        <div class="wish-sender">
-            <p>With heartfelt wishes,</p>
-            <p>Your True Friend</p>
-        </div>
-
-        <button id="surpriseBtn" class="surprise-button">Unwrap the Celebration!</button>
+    <div class="page-title-strip">
+        <h1>COMMERCE CONCEPTS POWER-UP</h1>
+        <p>11th Business Studies | Simplified & Essential Notes</p>
     </div>
 
-    <div id="confetti" class="confetti-animation"></div>
+    <main>
+        
+        <section id="small-business" class="topic-section">
+            <h2>I. SMALL BUSINESS AND STARTUPS 🚀</h2>
+            
+            <div class="content-box">
+                <h3>Role in Rural Development</h3>
+                <p class="simple-text">Why are these small units crucial for villages?</p>
+                <ul>
+                    <li>**Employment Boom:** They are the **biggest creator of jobs** in rural and backward regions.
+                        <span class="simple-text">(They give work to local people.)</span></li>
+                    <li>**Balanced Growth:** They help spread industry evenly, preventing all development from concentrating in big cities.</li>
+                    <li>**Local Talent Use:** They use local resources and skills, leading to faster growth in specific areas.</li>
+                </ul>
+            </div>
+            
+            
+
+            <div class="content-box">
+                <h3>Key Challenges (Problems)</h3>
+                <ul>
+                    <li>**Money Shortage:** Businesses often face a **shortage of capital** (finance) and struggle to get bank loans quickly.</li>
+                    <li>**Selling Difficulty:** They have poor marketing networks and cannot spend much on advertising to compete.</li>
+                    <li>**Old Methods:** They usually rely on **old technology and machinery**, which reduces their efficiency and quality.</li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <h3>Government Support Systems</h3>
+                <ul>
+                    <li>**NSIC (National Small Industries Corporation):** This provides **machines on lease** (rent basis) and helps with both raw material supply and product sales.</li>
+                    <li>**DIC (District Industries Centres):** This is the **one-stop solution** for entrepreneurs in every district for registration and getting government approvals.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="internal-trade" class="topic-section">
+            <h2>II. INTERNAL TRADE FUNDAMENTALS 🤝</h2>
+
+            <div class="content-box">
+                <h3>Wholesalers: The Supply Chain Bridge</h3>
+                <p class="simple-text">Who are wholesalers and what do they do?</p>
+                <ul>
+                    <li>**Definition:** A wholesaler <span class="definition-highlight">buys goods in large amounts</span> from the factory and <span class="definition-highlight">sells them to many retailers</span> in small lots.</li>
+                    <li>**Help to Manufacturer:** They buy the entire stock and store it, allowing the factory to keep producing without worry.</li>
+                    <li>**Help to Retailer:** They make goods available quickly, give market advice, and offer **credit (udhaar)**.</li>
+                </ul>
+            </div>
+
+            <div class="content-box">
+                <h3>Retailers: Fixed Shop vs. Moving Shop</h3>
+                <ul>
+                    <li>**Itinerant Retailers (Moving):** They <span class="definition-highlight">do not have a fixed place</span> and move daily. Example: **Hawkers and Pedlars** (selling vegetables, clothes door-to-door).</li>
+                    <li>**Fixed Shop Retailers (Permanent):** They operate from a fixed store. Example:
+                        <span class="simple-text">Small Scale: General Store, Specialty Stores.</span>
+                        <span class="simple-text">Large Scale: **Departmental Stores** (all products under one roof) and **Chain Stores** (multiple identical branches).</span></li>
+                </ul>
+            </div>
+            
+            
+
+            <div class="content-box">
+                <h3>GST (Goods and Services Tax): Key Takeaways</h3>
+                <ul>
+                    <li>**Core Idea:** GST is <span class="definition-highlight">one single tax</span> on goods and services, replacing many old taxes (like VAT, Service Tax, Excise Duty).</li>
+                    <li>**Benefit:** It removed the **cascading effect** (tax on tax), making the final price clear and generally reducing it.</li>
+                    <li>**Motto:** Promotes the idea of **One Nation, One Tax.**</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>This is the Ultimate Pro Guide for your Class 11 Business Studies Exam!</p>
+        <div class="signature">Made by Sachin</div>
+    </footer>
 
     <script>
-        const colors = ['#f39c12', '#e67e22', '#c0392b', '#e74c3c', '#FFD700', '#FFFFFF'];
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for Scroll Animations
+            const animatedElements = document.querySelectorAll('.content-box');
 
-        // --- Function 1: Pro Particle Background ---
-        function createParticleBackground() {
-            const bg = document.getElementById('particle-bg');
-            const numStars = 50; 
+            const observerOptions = {
+                root: null, 
+                rootMargin: '0px',
+                threshold: 0.1 
+            };
 
-            for (let i = 0; i < numStars; i++) {
-                const star = document.createElement('div');
-                star.classList.add('star');
-                
-                // Random position
-                star.style.left = Math.random() * 100 + 'vw';
-                star.style.top = Math.random() * 100 + 'vh';
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Apply 'is-visible' class for CSS animation
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
 
-                // Random size
-                const size = Math.random() * 2 + 1;
-                star.style.width = size + 'px';
-                star.style.height = size + 'px';
-                
-                // Random animation properties
-                star.style.animationDelay = Math.random() * 5 + 's';
-                star.style.animationDuration = Math.random() * 4 + 3 + 's';
-                
-                bg.appendChild(star);
-            }
-        }
-        createParticleBackground();
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-
-        // --- Function 2: Super Confetti on Click ---
-        document.getElementById('surpriseBtn').addEventListener('click', function() {
-            this.textContent = 'Celebration in Progress!';
-            this.disabled = true; 
-            
-            // Trigger a 3D subtle shake on the card
-            document.querySelector('.birthday-card').style.animation = 'subtleShake 0.5s';
-            setTimeout(() => {
-                 document.querySelector('.birthday-card').style.animation = 'flipIn 1.5s forwards ease-out';
-            }, 500);
-
-            startSuperConfetti();
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
         });
-        
-        // CSS for Subtle Shake Animation (added dynamically)
-        const styleSheet = document.createElement("style");
-        styleSheet.type = "text/css";
-        styleSheet.innerText += `
-            @keyframes subtleShake { 
-                0% { transform: translate(1px, 0px) rotate(0deg); } 
-                20% { transform: translate(-1px, 0px) rotate(-0.5deg); } 
-                40% { transform: translate(1px, 0px) rotate(0.5deg); } 
-                60% { transform: translate(-1px, 0px) rotate(-0.5deg); } 
-                80% { transform: translate(1px, 0px) rotate(0.5deg); } 
-                100% { transform: translate(0px, 0px) rotate(0deg); } 
-            }
-        `;
-        document.head.appendChild(styleSheet);
-
-
-        function startSuperConfetti() {
-            const confettiContainer = document.getElementById('confetti');
-            const numConfetti = 200; 
-
-            for (let i = 0; i < numConfetti; i++) {
-                const confetti = document.createElement('div');
-                confetti.classList.add('confetti');
-                
-                // Random Size and Color
-                const size = Math.random() * 12 + 5; 
-                confetti.style.width = size + 'px';
-                confetti.style.height = size + 'px';
-                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                
-                // Random Shape (Rectangle, Square, or Circle)
-                const shapeType = Math.random();
-                if (shapeType < 0.33) {
-                    confetti.style.borderRadius = '50%'; // Circle
-                } else if (shapeType < 0.66) {
-                    confetti.style.transform = 'rotate(45deg)'; // Diamond
-                } else {
-                    confetti.style.width = size * 2 + 'px'; // Rectangle
-                }
-
-
-                // Random Start Position and Z-depth for 3D feel
-                confetti.style.left = Math.random() * 100 + 'vw';
-                confetti.style.top = -50 + 'px';
-                confetti.style.transform = `translateZ(${Math.random() * 200 - 100}px)`; // Z-depth
-
-                // Random Animation Timing
-                confetti.style.animationDelay = Math.random() * 6 + 's';
-                confetti.style.animationDuration = Math.random() * 5 + 5 + 's'; 
-
-                confettiContainer.appendChild(confetti);
-            }
-
-            // Clear Confetti after 15 seconds
-            setTimeout(() => {
-                confettiContainer.innerHTML = '';
-                document.getElementById('surpriseBtn').disabled = false;
-                document.getElementById('surpriseBtn').textContent = 'Unwrap the Celebration!'; // Reset button text
-            }, 15000);
-        }
     </script>
     </body>
 </html>
